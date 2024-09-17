@@ -29,6 +29,7 @@ function indicators() {
   });
   dots[counter].className += "active";
 }
+
 dots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
     counter = index;
