@@ -13,7 +13,6 @@ const goprev = () => {
     counter--;
   } else {
     counter = slides.length - 1;
-    slide.style.transition = "transform 0.25s ease-in-out";
   }
   slideImage();
   indicators();
@@ -25,7 +24,6 @@ const gonext = () => {
     counter++;
   } else {
     counter = 0;
-    slide.style.transition = "transform 0.25s ease-in-out";
   }
   slideImage();
   indicators();
