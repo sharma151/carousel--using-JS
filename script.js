@@ -7,12 +7,20 @@ slides.forEach((slide, index) => {
 });
 
 const goprev = () => {
-  counter--;
+  if (counter > 0) {
+    counter--;
+  } else {
+    counter = slides.length - 1;
+  }
   slideImage();
   indicators();
 };
 const gonext = () => {
-  counter++;
+  if (counter < slides.length - 1) {
+    counter++;
+  } else {
+    counter = 0;
+  }
   slideImage();
   indicators();
 };
@@ -20,6 +28,7 @@ const gonext = () => {
 const slideImage = () => {
   slides.forEach((slide) => {
     slide.style.transform = `translateX(-${counter * 100}%)`;
+    slide.style.transition = "transform 1s ease";
   });
 };
 
