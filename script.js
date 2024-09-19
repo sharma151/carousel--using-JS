@@ -33,7 +33,7 @@ const gonext = () => {
 const slideImage = () => {
   slides.forEach((slide) => {
     slide.style.transform = `translateX(-${counter * 100}%)`;
-    slide.style.transition = "transform 1s ease";
+    slide.style.transition = "transform 1s ease-in-out";
   });
 };
 
